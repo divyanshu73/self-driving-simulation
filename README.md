@@ -1,15 +1,15 @@
-# Self Driving on Simulation
+# Self Driving Car on Udacity Simulation
 
-The purpose of this repository is to use a Nvidia model to control an autonomous car. The model uses image data as input and uses polynomial regression to predict the steering angle. 
+The purpose of this repository is to implement the Nvidia `End to End Learning for Self-Driving Cars` paper and train a CNN model to control an autonomous car steering angle which further tested on Udacity Simulation.
 
 ## Videos showing Successful Model
 
 ### Autonomous Driving on New Track
 https://github.com/user-attachments/assets/5011269c-d500-4ca9-abb6-b59424664794
 
-## Behavioral Cloning
+## Model Training
 
-The file `Behavioral_Cloning.ipynb` does the following:
+The file `self_driving_model_training.ipynb` does the following:
 
 ### 1. Download, store, and clean data from manual drives
 
@@ -31,10 +31,6 @@ Zooms into the image.
 Translate the image.
 ![alt text](images/Pan.png?raw=true "Pan")
 
-#### Flip
-
-Performs a horizontal flip of the image. Also requires the steering angle be flipped as well to still be accurate.
-![alt text](images/Flip.png?raw=true "Flip")
 
 #### Brightness
 
@@ -67,8 +63,12 @@ A file called `<name>.h5` will be saved, which stores the trained and validated 
 ## How to Use Model
 
 The model file can then be used in the following procedure.
+
+### 1. New Enviroment
+
+Create the new enviroment in your local and install the prerequisites from `requirements.txt`
   
-### 1. Use Model File
+### 2. Use Model File
 
 Ensure that `<name>.h5` is in the same directory as `drive.py`. Then edit the `drive.py` source code to replace the line
 
@@ -78,7 +78,7 @@ model = load_model('<name>.h5')
 
 and adjust `speed_limit` to any number between 0 and 30.
 
-### 2. `drive.py`
+### 3. `drive.py`
 
 Run the following from Anaconda Prompt + download any dependencies that come up.
 
@@ -86,7 +86,7 @@ Run the following from Anaconda Prompt + download any dependencies that come up.
 python drive.py
 ```
 
-### 3. Starting the Self Driving Car Simulator in Autonomous Mode
+### 4. Starting the Self Driving Car Simulator in Autonomous Mode
 
 Install the Self Driving Car Simulator (Version 1) from: https://github.com/udacity/self-driving-car-sim and run the program. Then start the Autonomous mode in either track.
 
