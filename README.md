@@ -1,4 +1,4 @@
-# self_driving_car
+# Self Driving on Simulation
 
 The purpose of this repository is to use a Nvidia model to control an autonomous car. The model uses image data as input and uses polynomial regression to predict the steering angle. 
 
